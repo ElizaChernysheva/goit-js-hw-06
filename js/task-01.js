@@ -1,3 +1,4 @@
+"use strict";
 const items = document.querySelectorAll(".item");
 const headings = document.querySelectorAll("h2");
 const itemsArr = [...items];
