@@ -1,6 +1,5 @@
 "use strict";
 const loginForm = document.querySelector(".login-form");
-const user = {};
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -11,7 +10,9 @@ loginForm.addEventListener("submit", (event) => {
   if (email.value === "" || password.value === "") {
     alert("Все поля должны быть заполнены");
   } else {
-    user.email = email.value;
-    user.password = password.value;
+    const user = {
+      email: email.value,
+      password: password.value,
+    };
   }
 });
