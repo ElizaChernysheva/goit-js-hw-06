@@ -15,12 +15,18 @@ const images = [
   },
 ];
 
-const imgs = images.map(({ url, alt }) => {
-  let item = `
-  <li>
-      <img src="${url}" alt="${alt}">
-  </li>
-  `;
+createGallery();
 
-  galleryList.insertAdjacentHTML("beforeend", item);
-});
+function createGallery() {
+  const imgs = images
+    .map(({ url, alt }) => {
+      return `
+          <li>
+              <img src="${url}" alt="${alt}">
+          </li>
+          `;
+    })
+    .join("");
+
+  galleryList.insertAdjacentHTML("beforeend", imgs);
+}
