@@ -11,5 +11,3 @@ input.addEventListener("blur", ({ currentTarget }) => {
     input.classList.remove("valid");
   }
 });
-
-

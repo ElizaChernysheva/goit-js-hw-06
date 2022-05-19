@@ -14,5 +14,8 @@ loginForm.addEventListener("submit", (event) => {
       email: email.value,
       password: password.value,
     };
+    console.log(user);
   }
+
+  event.currentTarget.reset();
 });
